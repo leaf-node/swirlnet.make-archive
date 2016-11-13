@@ -1,0 +1,30 @@
+{
+  "name": "swirlnet.make-archive",
+  "version": "0.0.0",
+  "description": "Novelty search for swirlnet neuroevolution library",
+  "main": "src/main.js",
+  "files": [
+      "src",
+      "README.md",
+      "LICENSE"
+    ],
+  "dependencies": {
+      "swirlnet.util": "1.0.x",
+      "assert": "1.x"
+  },
+  "keywords": [
+    "swirlnet",
+    "Neuroevolution",
+    "Novelty search",
+    "neural network",
+    "net",
+    "AI",
+    "ML",
+    "artificial intelligence",
+    "machine learning",
+    "training",
+    "evolution"
+  ],
+  "author": "Andrew Engelbrecht",
+  "license": "Apache-2.0"
+}
