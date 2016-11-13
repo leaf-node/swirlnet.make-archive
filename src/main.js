@@ -26,7 +26,8 @@ makeArchive = function (options) {
 
     var that, behaviorArchive, recentBehaviors, dimensionality, sparsities, maxArchiveSize,
         init, noteBehavior, getSparsities, archiveAndClear, getArchive, getArchiveLength, pruneArchive,
-        calculateSparsities, measureSparsity, defaultBehaviorDistanceFunction, measureBehaviorDistance;
+        calculateSparsities, measureSparsity, defaultBehaviorDistanceFunction, measureBehaviorDistance,
+        sparsitiesCalculatedThisGeneration;
 
     assert(typeof options === "object",
             "swirlnet: error: novelty search options argument must be an object.");
@@ -53,6 +54,8 @@ makeArchive = function (options) {
         } else {
             measureBehaviorDistance = options.behaviorDistanceFunction;
         }
+
+        sparsitiesCalculatedThisGeneration = false;
     };
 
     // adds a behavior and genome pair to the list of behaviors of genomes in the current generation
@@ -61,6 +64,9 @@ makeArchive = function (options) {
         if (dimensionality === undefined) {
             dimensionality = behavior.length;
         }
+
+        assert(sparsitiesCalculatedThisGeneration === false,
+                "swirlnet:error: behaviors must be archived and cleared by calling ArchiveAndClear() after calling getSparsities() (of an entire generation) before behaviors in the next generation may be recorded.");
 
         assert(Array.isArray(behavior),
                 "swirlnet: error: behavior must be an array.");
@@ -111,6 +117,8 @@ makeArchive = function (options) {
 
         recentBehaviors = [];
         sparsities = [];
+
+        sparsitiesCalculatedThisGeneration = false;
     };
 
     // removes early novel behaviors, leaving only
@@ -140,6 +148,8 @@ makeArchive = function (options) {
                 sparsities.push(measureSparsity(i));
             }
         }
+
+        sparsitiesCalculatedThisGeneration = true;
     };
 
     // measures the sparsity of a behaviour relative to archive of behaviours and behaviours of current generation
