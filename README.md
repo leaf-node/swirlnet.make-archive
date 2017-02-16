@@ -9,10 +9,6 @@ feature set and behavior is somewhat different.
 
 See the `API.md` file in the plain `swirlnet` repo for API documentation.
 
-## Status
-
-The API of this library is currently unstable.
-
 ## License
 
 This software is licensed under the Apache License, Version 2.0.

@@ -1,7 +1,9 @@
 {
   "name": "swirlnet.make-archive",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Novelty search for swirlnet neuroevolution library",
+  "url": "https://gitlab.com/sudoman/swirlnet.make-archive/issues",
+  "repository": "gitlab:sudoman/swirlnet.make-archive",
   "main": "src/main.js",
   "files": [
       "src",
@@ -10,7 +12,7 @@
     ],
   "dependencies": {
       "swirlnet.util": "1.0.x",
-      "assert": "1.x"
+      "assert": "1.4.x"
   },
   "keywords": [
     "swirlnet",
