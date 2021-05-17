@@ -2,8 +2,8 @@
   "name": "swirlnet.make-archive",
   "version": "1.0.0",
   "description": "Novelty search for swirlnet neuroevolution library",
-  "url": "https://gitlab.com/sudoman/swirlnet.make-archive/issues",
-  "repository": "gitlab:sudoman/swirlnet.make-archive",
+  "url": "https://github.com/leaf-node/swirlnet.make-archive/issues",
+  "repository": "github:leaf-node/swirlnet.make-archive",
   "main": "src/main.js",
   "files": [
       "src",
