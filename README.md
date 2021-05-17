@@ -13,6 +13,6 @@ See the `API.md` file in the plain `swirlnet` repo for API documentation.
 
 This software is licensed under the Apache License, Version 2.0.
 
-Networks, genomes and phenotypes that you evolve with this library are released
-to you under CC0.
+The authors of swirlnet claim no license over the networks, genomes and
+phenotypes evolved using this library.
 
